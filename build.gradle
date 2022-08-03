@@ -18,6 +18,19 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+azurewebapp {
+	subscription = '32330a10-7f2c-4464-8b79-7953dd87306c'
+	resourceGroup = 'mywebapp'
+	appName = 'azuremyapp'
+	pricingTier = 'Free'
+	region = 'Central US'
+	runtime {
+		os = 'Windows'
+		webContainer = 'Java SE'
+		javaVersion = 'Java 11'
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
